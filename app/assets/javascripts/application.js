@@ -18,6 +18,12 @@
 //= require_tree .
 
 $(document).on('turbolinks:load', () => {
+  
   // enable dropdown
   $('.ui.dropdown').dropdown()
+
+  // close flash messages
+  $('.message .close').on('click', function() {
+    $(this).closest('.message').transition('fade')
+  })
 })
